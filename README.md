@@ -464,7 +464,54 @@ endmodule
 
 ### Código del Testbench
 ```verilog
-// Reemplaza este bloque con tu código de testbench cuando lo termines
+module password_tb;
+    reg clk;
+    reg rst_n;
+    reg [3:0] sw;
+    wire [6:0] hex3, hex2, hex1, hex0;
+
+    password dut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .sw(sw),
+        .hex3(hex3),
+        .hex2(hex2),
+        .hex1(hex1),
+        .hex0(hex0)
+    );
+
+    // Reloj
+    always #10 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        rst_n = 0;
+        sw = 4'd0;
+        
+        #20 rst_n = 1;
+
+        // Prueba correcta: 5 - 4 - 0 - 0
+        sw = 4'd5; #20;
+        sw = 4'd4; #20;
+        sw = 4'd0; #20;
+        sw = 4'd0; #20;
+        
+        #40;
+        
+        // Reset
+        rst_n = 0; #20;
+        rst_n = 1;
+        
+        // Prueba incorrecta: 5 - 1 - 2 - 3
+        sw = 4'd5; #20;
+        sw = 4'd1; #20;
+        sw = 4'd2; #20;
+        sw = 4'd3; #20;
+
+        #40;
+        $stop;
+    end
+endmodule
 ```
 
 ### Simulación
@@ -599,7 +646,46 @@ endmodule
 
 ### Código del Testbench
 ```verilog
-// Reemplaza este bloque con tu código de testbench cuando lo termines
+module pwm_tb;
+    reg clk;
+    reg [9:0] sw;
+    wire [15:0] arduino_io;
+    wire [0:6] hex0, hex1, hex2;
+
+    pwm dut (
+        .MAX10_CLK1_50(clk),
+        .SW(sw),
+        .ARDUINO_IO(arduino_io),
+        .HEX0(hex0),
+        .HEX1(hex1),
+        .HEX2(hex2)
+    );
+
+    // Reloj
+    always #10 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        sw = 10'd0;
+
+        // Activar reset (SW[0] = 1)
+        sw[0] = 1; 
+        #40;
+
+        // Desactivar reset y poner ángulo de 90 grados
+        // Ángulo en SW[8:1]
+        sw[0] = 0;
+        sw[8:1] = 8'd90; 
+        
+        #10000;
+
+        // Cambiar ángulo a 180 grados
+        sw[8:1] = 8'd180;
+        #10000;
+
+        $stop;
+    end
+endmodule
 ```
 
 ### Simulación
@@ -1021,7 +1107,35 @@ endmodule
 
 ### Código del Testbench
 ```verilog
-// Reemplaza este bloque con tu código de testbench cuando lo termines
+module VGADemo_tb;
+    reg clk;
+    wire [3:0] vga_red;
+    wire [3:0] vga_green;
+    wire [3:0] vga_blue;
+    wire hsync_out;
+    wire vsync_out;
+
+    VGADemo dut (
+        .MAX10_CLK1_50(clk),
+        .vga_red(vga_red),
+        .vga_green(vga_green),
+        .vga_blue(vga_blue),
+        .hsync_out(hsync_out),
+        .vsync_out(vsync_out)
+    );
+
+    // Reloj
+    always #10 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        
+        // Esperar suficiente tiempo para ver movimiento de señales
+        #50000;
+        
+        $stop;
+    end
+endmodule
 ```
 
 ### Simulación
