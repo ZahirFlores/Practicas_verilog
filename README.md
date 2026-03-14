@@ -1103,7 +1103,7 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 7](Ruta_a_tu_imagen_de_funcionamiento_7.png)
+![Imagen del funcionamiento de la Práctica 7](Ajedrez.jfif)
 
 ### Código del Testbench
 ```verilog
