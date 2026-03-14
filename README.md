@@ -1,6 +1,6 @@
-# Portafolio de Prácticas - Verilog
+# Portafolio de Prácticas - Verilog - Bryan Zahir Flores Pérez
 
-Este repositorio contiene las prácticas desarrolladas en Verilog, incluyendo el código principal, bancos de pruebas (testbench) y capturas del funcionamiento y simulación.
+Este repositorio contiene las prácticas desarrolladas en Verilog, incluyendo el código principal, testbench y capturas del funcionamiento y simulación.
 
 ---
 
@@ -120,7 +120,8 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 2](Ruta_a_tu_imagen_de_funcionamiento_2.png)
+![Imagen del funcionamiento de la Práctica 2](dp1.jfif)
+![Imagen del funcionamiento de la Práctica 2](dp2.jfif)
 
 ### Código del Testbench
 ```verilog
@@ -264,7 +265,8 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 3](Ruta_a_tu_imagen_de_funcionamiento_3.png)
+![Imagen del funcionamiento de la Práctica 3](cont1.jfif)
+![Imagen del funcionamiento de la Práctica 3](cont2.jfif)
 
 ### Código del Testbench
 ```verilog
@@ -342,7 +344,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 3](Ruta_a_tu_imagen_de_simulacion_3.png)
+![Imagen de la simulación de la Práctica 3](contador_t.jfif)
 
 ---
 
