@@ -1141,4 +1141,4 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 7](Ruta_a_tu_imagen_de_simulacion_7.png)
+![Imagen de la simulación de la Práctica 7](VGA_t.jfif)
