@@ -168,7 +168,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 2](Ruta_a_tu_imagen_de_simulacion_2.png)
+![Imagen de la simulación de la Práctica 2](BCD_t.jfif)
 
 ---
 
@@ -298,7 +298,7 @@ module contador_top2_tb();
     always #10 clk = ~clk;
 
     initial begin
-        // --- Inicialización ---
+        // Inicialización
         clk = 0;
         rst_n = 0;      // Empezamos en reset
         btn_load = 1;   // Botones en la DE10-Lite son lógica negativa (1 = suelto)
@@ -308,7 +308,7 @@ module contador_top2_tb();
         // Esperar un poco y soltar reset
         #100 rst_n = 1;
         
-        // --- Escenario 1: Cargar el número 15 para contar hacia ARRIBA ---
+        // Cargar el número 15 para contar hacia ARRIBA
         #50;
         sw = 7'd15;
         sw_dir = 0;     // Queremos que suba
@@ -317,19 +317,19 @@ module contador_top2_tb();
         #100;           // Mantener presionado un momento
         btn_load = 1;   // Soltamos LOAD
         
-        // --- Escenario 2: Cambiar el Switch de dirección SIN darle a LOAD ---
+        // Cambiar el Switch de dirección SIN darle a LOAD 
         // Aquí probamos que NO cambie el sentido del conteo todavía
         #1000;
         sw_dir = 1;     // Cambiamos el switch físicamente a ABAJO
         #500;           // Esperamos... el contador debería seguir subiendo (16, 17...)
         
-        // --- Escenario 3: Aplicar el cambio de dirección con LOAD ---
+        // Aplicar el cambio de dirección con LOAD
         sw = 7'd50;     // Cambiamos a 50
         btn_load = 0;   // Presionamos LOAD (ahora sí debe tomar el sw_dir = 1)
         #100;
         btn_load = 1;
 
-        // --- Finalizar simulación ---
+        // Finalizar simulación
         #2000;
         $stop;          // Detiene la simulación en ModelSim/Questa
     end
@@ -462,7 +462,7 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 4](Ruta_a_tu_imagen_de_funcionamiento_4.png)
+![Imagen del funcionamiento de la Práctica 4](pass1.jfif)
 
 ### Código del Testbench
 ```verilog
@@ -517,7 +517,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 4](Ruta_a_tu_imagen_de_simulacion_4.png)
+![Imagen de la simulación de la Práctica 4](pass2)
 
 ---
 
