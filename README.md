@@ -26,7 +26,7 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 1](Ruta_a_tu_imagen_de_funcionamiento_1.png)
+![Imagen del funcionamiento de la Práctica 1](Numeros_Primos.jfif)
 
 ### Código del Testbench
 ```verilog
