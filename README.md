@@ -64,7 +64,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 1](Ruta_a_tu_imagen_de_simulacion_1.png)
+![Imagen de la simulación de la Práctica 1](nump_t.jfif)
 
 ---
 
@@ -642,7 +642,7 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 5](Ruta_a_tu_imagen_de_funcionamiento_5.png)
+![Imagen del funcionamiento de la Práctica 5](pwmn.jfif)
 
 ### Código del Testbench
 ```verilog
@@ -689,7 +689,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 5](Ruta_a_tu_imagen_de_simulacion_5.png)
+![Imagen de la simulación de la Práctica 5](pwm_t.jfif)
 
 ---
 
@@ -1004,7 +1004,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 6](Ruta_a_tu_imagen_de_simulacion_6.png)
+![Imagen de la simulación de la Práctica 6](UART_t.jfif)
 
 ---
 
