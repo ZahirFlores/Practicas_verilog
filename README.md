@@ -517,7 +517,7 @@ endmodule
 ```
 
 ### Simulación
-![Imagen de la simulación de la Práctica 4](pass2)
+![Imagen de la simulación de la Práctica 4](pass2.jfif)
 
 ---
 
@@ -925,7 +925,7 @@ endmodule
 ```
 
 ### Funcionamiento
-![Imagen del funcionamiento de la Práctica 6](Ruta_a_tu_imagen_de_funcionamiento_6.png)
+![Imagen del funcionamiento de la Práctica 6](uartn.jfif)
 
 ### Código del Testbench
 ```verilog
