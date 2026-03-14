@@ -280,8 +280,8 @@ module contador_top2_tb();
     // Señales de salida
     wire [7:0] hex0, hex1, hex2;
 
-    // Instancia del módulo a probar (UUT - Unit Under Test)
-    contador_top2 uut (
+    // Instancia del módulo a probar 
+    contador_top2 DUT (
         .clk(clk),
         .rst_n(rst_n),
         .btn_load(btn_load),
